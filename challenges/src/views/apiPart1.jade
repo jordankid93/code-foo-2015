@@ -1,0 +1,24 @@
+extends base
+
+block styles
+
+block body
+  div#api-part1-articles
+    h3 Articles
+    ul
+      for article in content.articles.data
+        li 
+          - var date = new Date(article.metadata.publishDate);
+          - var monthString = date.getMonth();
+          - if (monthString < 10)
+            - monthString = "0"+monthString;
+          a(href="http://www.ign.com/articles/#{date.getFullYear()}/#{monthString}/#{date.getDate()}/#{article.metadata.slug}" target="_blank") #{article.metadata.headline}
+      
+  div#api-part1-videos
+    h3 Videos
+    ul
+      for video in content.videos.data
+        li
+          a(href="#{video.metadata.url}" target="_blank") #{video.metadata.name}
+
+block scripts

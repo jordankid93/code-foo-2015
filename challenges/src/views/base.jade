@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/styles/main.css')
+    link(rel='stylesheet', href='/styles/font-awesome-4.3.0/css/font-awesome.min.css')
+    block styles
+  
+  body
+    h1= title
+    h4= subtitle
+    block body
+
+    footer
+      if prevButton != undefined
+        a.button.prev-button(href='#{prevButton.link}')
+          i.fa.fa-angle-left
+          |  #{prevButton.title}
+      if nextButton != undefined
+        a.button.next-button(href='#{nextButton.link}')
+          | #{nextButton.title} 
+          i.fa.fa-angle-right
+
+
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  block scripts

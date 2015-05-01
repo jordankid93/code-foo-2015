@@ -1,0 +1,173 @@
+body {
+	background-color: black;
+	color: white;
+	position: relative;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 0 1.5em;
+	font-size: 12pt;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+	display: none;
+}
+
+#section-title {
+	margin: 1em 0 0.5em 1em;
+}
+
+#content {
+	background-color: white;
+	padding: 1em 0;
+	border-radius: 4px;
+	margin-bottom: 2em;
+}
+
+#selectors {
+	margin: auto;
+	text-align: center;
+}
+
+#selector-videos {
+	border-top-left-radius: 1.5em;
+	border-bottom-left-radius: 1.5em;
+}
+
+#selector-articles {
+	border-top-right-radius: 1.5em;
+	border-bottom-right-radius: 1.5em;
+}
+
+.selector {
+	color: #C60411;
+	border: solid 2px #C60411;
+	text-align: center;
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.5em 0.2%;
+	width: 45%;
+	cursor: pointer;
+}
+
+.selected-selector {
+	background-color: #C60411;
+	color: white;
+}
+
+.section {
+	margin: 2.5em 0 0 0;
+	color: black;
+}
+
+.cell {
+	border-top: 1px dotted lightgray;
+	min-height: 4em;
+	position: relative;
+}
+
+.cell-notch {
+	background-color: #C60411;
+	position: absolute;
+	width: 0.5em;
+	height: 2em;
+	left: -0.25em;
+	top: 2em;
+	display: none;
+}
+
+.cell-selected > cell-notch {
+	display: inline-block;
+}
+
+.cell:first-child {
+	border-top: 1px dotted white;
+	margin-top: 0;
+}
+
+.cell:hover > .cell-notch{
+	display: block;
+}
+
+.cell-number {
+	float: left;
+	height: 5em;
+	line-height: 3.25em;
+	margin: 0 1.5em;
+	font-weight: bold;
+}
+
+.video-cell:first-child > .cell-thick-border{
+	border-top: 2px solid white;
+}
+
+.cell-title {
+	display: block;
+	font-weight: bold;
+	margin-top: 1.1em;
+	color: #444;
+	text-decoration: none;
+}
+
+.cell-title:visited {
+	color: #444;
+}
+
+.cell-subtitle {
+	display: block;
+	color: gray;
+	margin-bottom: 1em;
+}
+
+.cell-time {
+	float: right;
+	height: 4em;
+	line-height: 3.25em;
+	color: gray;
+	margin: 0 1.5em;
+}
+
+.cell-right {
+	float: right;
+	height: 4em;
+	line-height: 3.25em;
+	color: gray;
+	margin: 0 1em;
+}
+
+.cells-footer {
+	display: block;
+	color: gray;
+	margin-left: 3em;
+	font-size: 16pt;
+	position: relative;
+}
+
+
+@media all and (min-width: 720px) {
+	body {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media all and (min-width: 1080px) {
+	body {
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+
+@media all and (min-width: 1400px) {
+	body {
+		width: 50%;
+		margin: 0 auto;
+	}
+}

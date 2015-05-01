@@ -1,0 +1,104 @@
+doctype html
+html
+  head
+    title= title
+    
+    link(rel='stylesheet', href='/styles/font-awesome-4.3.0/css/font-awesome.min.css')
+    link(rel="stylesheet", href="/styles/ign.css", type="text/css")
+  
+  body
+    h1#section-title VIDEOS
+    div#content
+      div#selectors
+        div#selector-videos.selector.selected-selector VIDEOS
+        div#selector-articles.selector ARTICLES
+      
+      // Videos
+      div#videos-section.section
+        //for video in content.videos.data
+        - for (var i = 0; i < content.videos.data.length; i++)
+          - var video = content.videos.data[i].metadata
+          div.cell.no-select
+            div.cell-notch
+            - var indexString
+            - if ((i+1) < 10) indexString = "0"+(i+1)
+            - else indexString = i+1;
+            span.cell-number #{indexString}
+            - var mins = Math.floor(video.duration/60);
+            - var secs = video.duration%60;
+            - if (secs < 10) secs = "0"+secs
+            span.cell-time  #{mins}:#{secs}
+            a.cell-title(href="#{video.url}", target="_blank") #{video.name}
+            span.cell-subtitle #{video.genre}
+        div.cells-footer Load More Videos
+      
+      // Articles
+      div#articles-section.section.hidden
+        - for (var i = 0; i < content.articles.data.length; i++)
+          - var article = content.articles.data[i].metadata
+          div.cell.no-select
+            div.cell-notch
+            - var indexString
+            - if ((i+1) < 10) indexString = "0"+(i+1)
+            - else indexString = i+1;
+            span.cell-number #{indexString}
+            - var mins = Math.floor(video.duration/60);
+            - var secs = video.duration%60;
+            - if (secs < 10) secs = "0"+secs
+            span.cell-right
+            - var date = new Date(article.publishDate);
+            - var monthString = date.getMonth();
+            - if (monthString < 10)
+            - monthString = "0"+monthString;
+            a.cell-title(href="http://www.ign.com/articles/#{date.getFullYear()}/#{monthString}/#{date.getDate()}/#{article.slug}", target="_blank") #{article.headline}
+            span.cell-subtitle #{article.subHeadline}
+        div.cells-footer Load More Articles
+    
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script(type="text/javascript").
+    $("#selector-videos").on("click", function(){
+      $("#selector-videos").addClass("selected-selector");
+      $("#selector-articles").removeClass("selected-selector");
+      $("#videos-section").removeClass("hidden");
+      $("#articles-section").addClass("hidden");
+      $("#section-title").text("VIDEOS");
+    });
+    
+    $("#selector-articles").on("click", function(){
+      $("#selector-articles").addClass("selected-selector");
+      $("#selector-videos").removeClass("selected-selector");
+      $("#articles-section").removeClass("hidden");
+      $("#videos-section").addClass("hidden");
+      $("#section-title").text("ARTICLES");
+    });
+  
+//  body
+//    h1= title
+//    h4= subtitle
+//    
+//    
+//    div#api-part1-articles
+//    ul
+//      for article in content.articles.data
+//        li 
+//          - var date = new Date(article.metadata.publishDate);
+//          - var monthString = date.getMonth();
+//          - if (monthString < 10)
+//            - monthString = "0"+monthString;
+//          a(href="http://www.ign.com/articles/#{date.getFullYear()}/#{monthString}/#{date.getDate()}/#{article.metadata.slug}" target="_blank") #{article.metadata.headline}
+//      
+//    div#api-part1-videos
+//      ul
+//        for video in content.videos.data
+//          li
+//            a(href="#{video.metadata.url}" target="_blank") #{video.metadata.name}
+//
+//    footer
+//      if prevButton != undefined
+//        a.button.prev-button(href='#{prevButton.link}')
+//          i.fa.fa-angle-left
+//          |  #{prevButton.title}
+//      if nextButton != undefined
+//        a.button.next-button(href='#{nextButton.link}')
+//          | #{nextButton.title} 
+//          i.fa.fa-angle-right

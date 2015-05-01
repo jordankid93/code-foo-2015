@@ -1,6 +1,9 @@
 IGN's Code-Foo 2015
 =============
 
+Answers
+-------------
+
 For more information on IGN's Code-Foo 2015, visit [ign.com/code-foo/2015] (http://ign.com/code-foo/2015).
 
 To apply to Code-Foo 2015, fork this repository and answer all questions. Push your answers to your fork and send us an email at ign_code-foo@ign.com to let us know you're finished.

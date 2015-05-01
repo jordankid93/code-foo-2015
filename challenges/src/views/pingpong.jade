@@ -1,0 +1,46 @@
+extends base
+
+block styles
+
+block body
+  h3 What do we know?
+  div.block
+    ul
+      h4.block-header
+        i.fa.fa-plane  
+        |  Boeing 747
+      li The Boeing 747-400F is the all cargo transport model of the 747-400 series.
+      ul
+        li If someone is looking to ship a lot of ping-pong balls, this would be the model used.
+      li 
+        | According to 
+        a(href="http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf" target="_blank") cargolux
+        | , the 747-400F can carry about 765.48 m<sup>3</sup> worth of material on cargo pallets.
+      ul
+        li This is taking into account both the main deck and lower deck.
+  div.block
+    ul
+      h4.block-header
+        i.fa.fa-circle-thin
+        |  Ping Pong Ball
+      li
+        | According to the 
+        a(href="http://www.ittf.com/stories/pictures/T3_40mmBall.pdf" target="_blank") International Table Top Federation (IFFT)
+        | , a regulation ping-pong ball should be 40mm in diameter.
+  h3 Math Time
+  p Ping Pong Diameter = 40mm = 0.04m
+  p Ping Pong Radius = 0.04m / 2 = 0.02m
+  p Ping Pong Volume = (4/3)&pi;*r<sup>3</sup> = (4/3)&pi;*0.02<sup>3</sup> = (4/3)&pi;*0.000008 = 0.00001066666*&pi; = 0.00003351032m<sup>3</sup>
+  p Number of ping-pong balls on Boeing 747-400F = 765.48m<sup>3</sup> / 0.00003351032m<sup>3</sup> = 22843112.21 (which when rounded to full ping pong balls) = <span class="answer">22843112 ping pong balls</span>
+  
+  h3 Conclusion
+  p Going off of the information found and following standard shipping precedures, the max number of ping-pong balls you can fit on a Boeing 747 is <span class="answer">2,2843,112</span>.
+  
+  h3 Important Notes
+  ul
+    li This is assuming we want to fit the ping pong balls in the plane in the traditional manner of putting cargo on a plane. Physically we could include many many more. Going from the diagram <a href="http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf">here</a> we can see a lot of extra space inbetween the cargo pallets and the wall. The pallets also do not reach the top of the cargo area since it is a curved cealing and we're dealing with flat-sided boxed.
+    li Another limitation you must consider is the area intended for cargo. Things like the small hollow sections in the wings, the compartment that hols the wheels, and even the cockpit could be used to hold more ping-pong balls, however this would reduce the planes functionality. 
+    li We also disregard the shape of the ping pong ball. When stacking balls in a crate, they will shift into the small areas between the balls beneath it but still some air gaps exists (vomule that we don't account for). This would also effect the real world number.
+    li Lastely we assume we're trying to fit the ping-pong balls and keep them in tact. If we were the flatten the ping-pong balls, we would be able to fit even more but obviously this would make them completely useless.
+
+block scripts
