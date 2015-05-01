@@ -1,8 +1,14 @@
 IGN's Code-Foo 2015
 =============
 
-Answers
--------------
+### Answers
+
+My answers to the challenges can be found within the "challenges' directory as a Node.js app. Navigate to the directory, run 'npm start', and open a browser to 'http://localhost:3000/' to view!
+
+If that's not working, I also uploaded everything to Heroku [here] (https://ign-code-foo-2015-submission.herokuapp.com).
+
+=============
+=============
 
 For more information on IGN's Code-Foo 2015, visit [ign.com/code-foo/2015] (http://ign.com/code-foo/2015).
 
