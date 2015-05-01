@@ -3,8 +3,57 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Ping Pong Challenge</title>
+	
+	<link rel="stylesheet" href="./styles/main.css" type="text/css"></link>
+	<link rel="stylesheet" href="./styles/font-awesome-4.3.0/css/font-awesome.css" type="text/css"></link>
 </head>
 <body>
+	<h1>Ping Pong Ball Challenge</h1>
+	<h4>How many ping-pong balls can fit in a Boeing 747?</h4>
 	
+	<h3>What do we know?</h3>
+	<div class="block">
+		<ul>
+			<h4 class="block-header"><i class="fa fa-plane"></i> Boeing 747</h4>
+			<li>The Boeing 747-400F is the all cargo transport model of the 747-400 series.</li>
+			<ul>
+				<li>If someone is looking to ship a lot of ping-pong balls, this would be the model used.</li>
+			</ul>
+			<li>According to <a href="http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf" target="_blank">cargolux</a> , the 747-400F can carry about 765.48 m<sup>3</sup> worth of material on cargo pallets.</li>
+			<ul>
+				<li>This is taking into account both the main deck and lower deck.</li>
+			</ul>
+		</ul>
+	</div>
+	<div class="block">
+		<ul>
+			<h4 class="block-header"><i class="fa fa-circle-thin"></i> Ping Pong Ball</h4>
+			<li>According to the <a href="http://www.ittf.com/stories/pictures/T3_40mmBall.pdf" target="_blank">International Table Top Federation (IFFT)</a>, a regulation ping-pong ball should be 40mm in diameter.</li>
+		</ul>
+	</div>
+	
+	<h3>Math Time</h3>
+	
+	<p>Ping Pong Diameter = 40mm = 0.04m</p>
+	<p>Ping Pong Radius = 0.04m / 2 = 0.02m</p>
+	<p>Ping Pong Volume = (4/3)&pi;*r<sup>3</sup> = (4/3)&pi;*0.02<sup>3</sup> = (4/3)&pi;*0.000008 = 0.00001066666*&pi; = 0.00003351032m<sup>3</sup></p>
+	<p>Number of ping-pong balls on Boeing 747-400F = 765.48m<sup>3</sup> / 0.00003351032m<sup>3</sup> = 22843112.21 (which when rounded to full ping pong balls) = <span class="answer">22843112 ping pong balls</span></p>
+	
+	<h3>Conclusion</h3>
+	
+	<p>Going off of the information found and following standard shipping precedures, the max number of ping-pong balls you can fit on a Boeing 747 is <span class="answer">2,2843,112</span>.</p>
+	
+	<h3>Important Notes</h3>
+	
+	<ul>
+		<li>This is assuming we want to fit the ping pong balls in the plane in the traditional manner of putting cargo on a plane. Physically we could include many many more. Going from the diagram <a href="http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf">here</a> we can see a lot of extra space inbetween the cargo pallets and the wall. The pallets also do not reach the top of the cargo area since it is a curved cealing and we're dealing with flat-sided boxed.</li>
+		<li>Another limitation you must consider is the area intended for cargo. Things like the small hollow sections in the wings, the compartment that hols the wheels, and even the cockpit could be used to hold more ping-pong balls, however this would reduce the planes functionality.</li>
+		<li>Lastely we assume we're trying to fit the ping-pong balls and keep them in tact. If we were the flatten the ping-pong balls, we would be able to fit even more but obviously this would make them completely useless.</li>
+	</ul>
+	
+	<footer>
+		<a href="./index.html" class="button prev-button"><i class="fa fa-angle-left"></i> Introduction</a>
+		<a href="./wordsearch.html" class="button next-button">Word Search <i class="fa fa-angle-right"></i></a>
+	</footer>
 </body>
 </html>
